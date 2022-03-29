@@ -15,10 +15,12 @@ class CreateTbProdukTable extends Migration
     {
         Schema::create('tb_produk', function (Blueprint $table) {
             $table->id();
+            $table->string('thumbnail_img');
             $table->string('name_img');
             $table->string('name_product');
             $table->string('price_product');
-            $table->string('description_product');
+            $table->longText('description_product');
+            $table->longText('information_product');
             $table->string('sku_product');
             $table->string('categories_product');
             $table->string('tags_product');

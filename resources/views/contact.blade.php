@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')	
+@section('content')
 <!-- Begin Main Content Area -->
 <main class="main-content">
     <div class="breadcrumb-area breadcrumb-height" data-bg-image="{{ asset('customer/assets/images/breadcrumb/bg/1-1-1919x388.jpg') }}">
@@ -26,12 +26,9 @@
                 <div class="col-lg-12">
                     <div class="about-content">
                         <h2 class="about-title">Cerita <span>Kami</span></h2>
-                        <p class="about-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                            laborum. Sed ut perspiciatis</p>
+                        <p class="about-desc">Carik Bali merupakan usaha lokal Bali yang menjual berbagai hasil panen pertanian dan perkebunan daerah Bali. Carik Bali terinspirasi dari banyaknya lahan pertanian dan perkebunan di Bali. Banyak petani kesulitan menjual atau menyalurkan hasil panennya ke konsumen langsung, sehingga menjual sekedar dengan harga yang murah, dan cenderung merugikan petani, yang penting laku. Carik Bali mempunyai tujuan untuk mendukung pemasaran hasil panen petani Bali. Hasil pertanian dan perkebunan daerah Bali sangat beragam. Hal ini adalah potensi besar yang perlu dikelola dengan baik, untuk mewujudkan masyarakat yang mempunyai pangan kualitas baik.
+                            Mari bersama dukung petani lokal kita dengan pertanian dan perkebunannya, sehingga tercermin kebahagiaan para petani kita dan terus bersemangat berkarya untuk daerah.
+                            </p>
                         <div class="about-signature">
                             <img src="{{ asset('customer/assets/images/about/icon/2.png') }}" alt="Signature">
                         </div>
@@ -53,7 +50,7 @@
                             </div>
                             <div class="shipping-content">
                                 <h2 class="title">Bebas biaya kirim</h2>
-                                <p class="short-desc mb-0">Dibatasi pada $319 per pesanan</p>
+                                <p class="short-desc mb-0">Dibatasi pada Rp. 100.000 per pesanan</p>
                             </div>
                         </div>
                     </div>

@@ -54,7 +54,7 @@
                                 </div>
 
                                 <a href="index.html" class="header-logo">
-                                    <img src="{{ asset('customer/assets/images/logo/dark.png') }}" alt="Header Logo">
+                                    <img src="{{ asset('customer/img/logo.png') }}" height="100px" alt="Header Logo">
                                 </a>
 
                                 <div class="header-right">
@@ -233,7 +233,7 @@
                             <div class="footer-widget-item">
                                 <div class="footer-widget-logo">
                                     <a href="index.html">
-                                        <img src="{{ asset('customer/assets/images/logo/dark.png') }}" alt="Logo">
+                                        <img src="{{ asset('customer/img/logo.png') }}" height="100px" alt="Logo">
                                     </a>
                                 </div>
                                 <p class="footer-widget-desc">Lorem ipsum dolor sit amet, consec adipisl elit, sed do eiusmod
@@ -241,7 +241,7 @@
                                     <br>
                             incidio ut labore et dolore magna.
                                 </p>
-                                <div class="social-link with-border">
+                                {{-- <div class="social-link with-border">
                                     <ul>
                                         <li>
                                             <a href="#" data-tippy="Facebook" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
@@ -264,7 +264,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="col-lg-6 pt-40">

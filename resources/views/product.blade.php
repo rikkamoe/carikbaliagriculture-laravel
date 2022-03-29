@@ -28,23 +28,23 @@
                         <div class="swiper-container single-product-slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <a href="{{ asset('customer/assets/images/product/large-size/1-1-570x633.jpg') }}" class="single-img gallery-popup">
-                                        <img class="img-full" src="{{ asset('customer/assets/images/product/large-size/1-1-570x633.jpg') }}" alt="Product Image">
+                                    <a href="{{ asset('customer/img/'.$data->name_img) }}" class="single-img gallery-popup">
+                                        <img class="img-full" src="{{ asset('customer/img/'.$data->name_img) }}" alt="Product Image">
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="{{ asset('customer/assets/images/product/large-size/1-2-570x633.jpg') }}" class="single-img gallery-popup">
-                                        <img class="img-full" src="{{ asset('customer/assets/images/product/large-size/1-2-570x633.jpg') }}" alt="Product Image">
+                                    <a href="{{ asset('customer/img/'.$data->name_img) }}" class="single-img gallery-popup">
+                                        <img class="img-full" src="{{ asset('customer/img/'.$data->name_img) }}" alt="Product Image">
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="{{ asset('customer/assets/images/product/large-size/1-3-570x633.jpg') }}" class="single-img gallery-popup">
-                                        <img class="img-full" src="{{ asset('customer/assets/images/product/large-size/1-3-570x633.jpg') }}" alt="Product Image">
+                                    <a href="{{ asset('customer/img/'.$data->name_img) }}" class="single-img gallery-popup">
+                                        <img class="img-full" src="{{ asset('customer/img/'.$data->name_img) }}" alt="Product Image">
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="{{ asset('customer/assets/images/product/large-size/1-4-570x633.jpg') }}" class="single-img gallery-popup">
-                                        <img class="img-full" src="{{ asset('customer/assets/images/product/large-size/1-4-570x633.jpg') }}" alt="Product Image">
+                                    <a href="{{ asset('customer/img/'.$data->name_img) }}" class="single-img gallery-popup">
+                                        <img class="img-full" src="{{ asset('customer/img/'.$data->name_img) }}" alt="Product Image">
                                     </a>
                                 </div>
                             </div>
@@ -53,16 +53,16 @@
                             <div class="swiper-container single-product-thumbs">
                                 <div class="swiper-wrapper">
                                     <a href="#" class="swiper-slide">
-                                        <img class="img-full" src="{{ asset('customer/assets/images/product/large-size/1-1-570x633.jpg') }}" alt="Product Thumnail">
+                                        <img class="img-full" src="{{ asset('customer/img/'.$data->name_img) }}" alt="Product Thumnail">
                                     </a>
                                     <a href="#" class="swiper-slide">
-                                        <img class="img-full" src="{{ asset('customer/assets/images/product/large-size/1-2-570x633.jpg') }}" alt="Product Thumnail">
+                                        <img class="img-full" src="{{ asset('customer/img/'.$data->name_img) }}" alt="Product Thumnail">
                                     </a>
                                     <a href="#" class="swiper-slide">
-                                        <img class="img-full" src="{{ asset('customer/assets/images/product/large-size/1-3-570x633.jpg') }}" alt="Product Thumnail">
+                                        <img class="img-full" src="{{ asset('customer/img/'.$data->name_img) }}" alt="Product Thumnail">
                                     </a>
                                     <a href="#" class="swiper-slide">
-                                        <img class="img-full" src="{{ asset('customer/assets/images/product/large-size/1-4-570x633.jpg') }}" alt="Product Thumnail">
+                                        <img class="img-full" src="{{ asset('customer/img/'.$data->name_img) }}" alt="Product Thumnail">
                                     </a>
                                 </div>
                                 <!-- Add Arrows -->

@@ -33,6 +33,7 @@ class Product extends Model
         'name_product',
         'price_product',
         'description_product',
+        'information_product',
         'sku_product',
         'categories_product',
         'tags_product',

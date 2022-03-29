@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')	
+@section('content')
     <!-- Begin Slider Area -->
     <div class="slider-area">
 
@@ -25,7 +25,7 @@
                                     <div class="inner-img">
                                         <div class="scene fill">
                                             <div class="expand-width" data-depth="0.2">
-                                                <img src="{{ asset('customer/assets/images/slider/inner-img/1-1-524x617.png') }}" alt="Inner Image">
+                                                <img src="{{ asset('customer/img/3.jpg') }}" alt="Inner Image">
                                             </div>
                                         </div>
                                     </div>
@@ -52,7 +52,7 @@
                                     <div class="inner-img">
                                         <div class="scene fill">
                                             <div class="expand-width" data-depth="0.2">
-                                                <img src="{{ asset('customer/assets/images/slider/inner-img/1-1-524x617.png') }}" alt="Inner Image">
+                                                <img src="{{ asset('customer/img/3.jpg') }}" alt="Inner Image">
                                             </div>
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@
                             </div>
                             <div class="shipping-content">
                                 <h2 class="title">Bebas biaya kirim</h2>
-                                <p class="short-desc mb-0">Dibatasi pada $319 per pesanan</p>
+                                <p class="short-desc mb-0">Dibatasi pada Rp. 100.000 per pesanan</p>
                             </div>
                         </div>
                     </div>
@@ -133,8 +133,8 @@
                                     <div class="product-item">
                                         <div class="product-img">
                                             <a href="{{ url('product') }}/{{ $item->id }}">
-                                                <img class="primary-img" src="{{ asset('customer/assets/images/product/medium-size/1-1-270x300.jpg') }}" alt="Product Images">
-                                                <img class="secondary-img" src="{{ asset('customer/assets/images/product/medium-size/1-2-270x300.jpg') }}" alt="Product Images">
+                                                <img class="primary-img" src="{{ asset('customer/img/'.$item->thumbnail_img) }}" alt="Product Images">
+                                                <img class="secondary-img" src="{{ asset('customer/img/'.$item->thumbnail_img) }}" alt="Product Images">
                                             </a>
                                         </div>
                                         <div class="product-content">
@@ -172,7 +172,7 @@
                             <div class="user-info mb-3">
                                 <div class="user-shape-wrap">
                                     <div class="user-img">
-                                        <img src="{{ asset('customer/assets/images/testimonial/user/1.png') }}" alt="User Image">
+                                        <img src="{{ asset('customer/img/user.png') }}" alt="User Image">
                                     </div>
                                 </div>
                                 <div class="user-content text-charcoal">
@@ -187,7 +187,7 @@
                             <div class="user-info mb-3">
                                 <div class="user-shape-wrap">
                                     <div class="user-img">
-                                        <img src="{{ asset('customer/assets/images/testimonial/user/2.png') }}" alt="User Image">
+                                        <img src="{{ asset('customer/img/user.png') }}" alt="User Image">
                                     </div>
                                 </div>
                                 <div class="user-content text-charcoal">
@@ -202,7 +202,7 @@
                             <div class="user-info mb-3">
                                 <div class="user-shape-wrap">
                                     <div class="user-img">
-                                        <img src="{{ asset('customer/assets/images/testimonial/user/3.png') }}" alt="User Image">
+                                        <img src="{{ asset('customer/img/user.png') }}" alt="User Image">
                                     </div>
                                 </div>
                                 <div class="user-content text-charcoal">
