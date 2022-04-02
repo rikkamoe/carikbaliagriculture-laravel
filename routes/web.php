@@ -3,6 +3,8 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\SuperadminController;
+use App\Http\Controllers\SuperadminProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +31,10 @@ Route::group(['middleware' => ['auth']], function() {
 
 //Superadmin
 Route::get('/superadmin/login/', [AuthController::class, 'superadminlogin'])->name('login.superadmin');
+Route::group(['middleware' => ['auth', 'role:superadmin']], function() {
+    Route::get('/superadmin/dashboard', [SuperadminController::class, 'index'])->name('dashboard.superadmin');
+    Route::get('/superadmin/product', [SuperadminProductController::class, 'index'])->name('product.superadmin');
+});
 
 //Customer
 Route::get('/customer', [CustomerController::class, 'index'])->name('dashboard.customer');
