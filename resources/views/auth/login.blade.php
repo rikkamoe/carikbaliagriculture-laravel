@@ -121,17 +121,18 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form action="#">
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
                                 <div class="login-form">
                                     <h4 class="login-title">Login</h4>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <label>Email Address*</label>
-                                            <input type="email" placeholder="Email Address">
+                                            <input type="email" name="email" placeholder="Email Address">
                                         </div>
                                         <div class="col-lg-12">
                                             <label>Password</label>
-                                            <input type="password" placeholder="Password">
+                                            <input type="password" name="password" placeholder="Password">
                                         </div>
                                         <div class="col-md-4 pt-1 mt-md-0">
                                             <div class="forgotton-password_info">
@@ -139,7 +140,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-12 pt-5">
-                                            <button class="btn btn-custom-size lg-size btn-pronia-primary">Login</button>
+                                            <button class="btn btn-custom-size lg-size btn-pronia-primary" type="submit">Login</button>
                                         </div>
                                     </div>
                                 </div>

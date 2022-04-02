@@ -22,10 +22,16 @@ Route::get('/product/{id}', [HomeController::class, 'product'])->name('product.g
 Route::get('/education', [HomeController::class, 'education'])->name('education.guest');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact.guest');
 
+//Login Filter Session
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/dashboard', [AuthController::class, 'index'])->name('dashboard');
+});
+
 //Superadmin
 Route::get('/superadmin/login/', [AuthController::class, 'superadminlogin'])->name('login.superadmin');
 
 //Customer
 Route::get('/customer', [CustomerController::class, 'index'])->name('dashboard.customer');
+
 
 require __DIR__.'/auth.php';
