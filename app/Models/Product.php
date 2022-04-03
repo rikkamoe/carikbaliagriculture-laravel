@@ -29,7 +29,7 @@ class Product extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name_img',
+        'thumbnail_img',
         'name_product',
         'price_product',
         'description_product',
@@ -37,6 +37,7 @@ class Product extends Model
         'sku_product',
         'categories_product',
         'tags_product',
+        'stock_product',
         'status_product',
     ];
 }

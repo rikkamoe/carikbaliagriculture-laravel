@@ -194,6 +194,7 @@
         </div>
     </div>
 
+    @include('sweetalert::alert')
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('superadmin/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('superadmin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

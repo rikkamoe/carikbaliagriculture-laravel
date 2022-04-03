@@ -34,6 +34,9 @@ Route::get('/superadmin/login/', [AuthController::class, 'superadminlogin'])->na
 Route::group(['middleware' => ['auth', 'role:superadmin']], function() {
     Route::get('/superadmin/dashboard', [SuperadminController::class, 'index'])->name('dashboard.superadmin');
     Route::get('/superadmin/product', [SuperadminProductController::class, 'index'])->name('product.superadmin');
+    Route::post('/superadmin/product', [SuperadminProductController::class, 'store'])->name('post.product.superadmin');
+    Route::post('/superadmin/product/edit/{id}', [SuperadminProductController::class, 'update'])->name('update.product.superadmin');
+    Route::delete('/superadmin/product/delete/{id}', [SuperadminProductController::class, 'destroy'])->name('delete.product.superadmin');
 });
 
 //Customer
