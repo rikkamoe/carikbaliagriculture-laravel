@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\SuperadminProductController;
+use App\Http\Controllers\SuperadminImageProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +38,10 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function() {
     Route::post('/superadmin/product', [SuperadminProductController::class, 'store'])->name('post.product.superadmin');
     Route::post('/superadmin/product/edit/{id}', [SuperadminProductController::class, 'update'])->name('update.product.superadmin');
     Route::delete('/superadmin/product/delete/{id}', [SuperadminProductController::class, 'destroy'])->name('delete.product.superadmin');
+    Route::get('/superadmin/product/image/{id}', [SuperadminImageProductController::class, 'show'])->name('product.image.superadmin');
+    Route::post('/superadmin/product/image/{id}', [SuperadminImageProductController::class, 'store'])->name('post.product.image.superadmin');
+    Route::post('/superadmin/product/image/edit/{id}', [SuperadminImageProductController::class, 'update'])->name('update.product.image.superadmin');
+    Route::delete('/superadmin/product/image/delete/{id}', [SuperadminImageProductController::class, 'destroy'])->name('delete.product.image.superadmin');
 });
 
 //Customer

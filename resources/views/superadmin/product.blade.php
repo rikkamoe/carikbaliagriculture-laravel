@@ -22,6 +22,7 @@
                             <th>Name Product</th>
                             <th>Price</th>
                             <th>Stock</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -31,6 +32,7 @@
                             <th>Name Product</th>
                             <th>Price</th>
                             <th>Stock</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
@@ -45,7 +47,14 @@
                             <td>{{ $item->price_product }}</td>
                             <td>{{ $item->stock_product }}</td>
                             <td>
-                                <a href="#" class="btn btn-info">Gallery</a>
+                                @if ($item->status_product == '1')
+                                    <span class="badge bg-success">Active</span>
+                                @else
+                                    <span class="badge bg-danger">Non-Active</span>
+                                @endif
+                            </td>
+                            <td>
+                                <a href="{{ url('superadmin/product/image') }}/{{ $item->id }}" class="btn btn-info">Gallery</a>
                                 <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop2{{ $item->id }}">Edit</button>
 
                                 <div class="modal fade" id="staticBackdrop2{{ $item->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -140,7 +149,7 @@
                                                                     @endif
                                                                 </option>
                                                                 @if ($item->status_product == '1')
-                                                                    <option value="0">Non-Active</option>
+                                                                    <option value="2">Non-Active</option>
                                                                 @else
                                                                     <option value="1">Active</option>
                                                                 @endif
