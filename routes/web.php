@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Route;
 
 // Guest
@@ -17,6 +18,15 @@ use App\Http\Controllers\SuperadminProductController;
 use App\Http\Controllers\SuperadminImageProductController;
 use App\Http\Controllers\SuperadminUserController;
 
+=======
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\SuperadminController;
+use App\Http\Controllers\SuperadminProductController;
+use App\Http\Controllers\SuperadminImageProductController;
+use Illuminate\Support\Facades\Route;
+>>>>>>> 1fedd7b8182012454ee71dc7261a0fa3290734d2
 
 /*
 |--------------------------------------------------------------------------
@@ -52,10 +62,13 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function() {
     Route::post('/superadmin/product/image/{id}', [SuperadminImageProductController::class, 'store'])->name('post.product.image.superadmin');
     Route::post('/superadmin/product/image/edit/{id}', [SuperadminImageProductController::class, 'update'])->name('update.product.image.superadmin');
     Route::delete('/superadmin/product/image/delete/{id}', [SuperadminImageProductController::class, 'destroy'])->name('delete.product.image.superadmin');
+<<<<<<< HEAD
     Route::get('/superadmin/customer', [SuperadminUserController::class, 'index'])->name('user.superadmin');
     Route::post('/superadmin/customer', [SuperadminUserController::class, 'store'])->name('post.user.superadmin');
     Route::post('/superadmin/customer/edit/{id}', [SuperadminUserController::class, 'update'])->name('update.user.superadmin');
     Route::delete('/superadmin/customer/delete/{id}', [SuperadminUserController::class, 'destroy'])->name('delete.user.superadmin');
+=======
+>>>>>>> 1fedd7b8182012454ee71dc7261a0fa3290734d2
 });
 
 //Customer

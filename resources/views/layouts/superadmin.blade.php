@@ -77,12 +77,17 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="true" aria-controls="collapseTwo">
+<<<<<<< HEAD
                     <i class="fas fa-fw fa-money-bill"></i>
+=======
+                    <i class="fas fa-fw fa-cog"></i>
+>>>>>>> 1fedd7b8182012454ee71dc7261a0fa3290734d2
                     <span>Transaction</span>
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Transactions:</h6>
+<<<<<<< HEAD
                         <a class="collapse-item" href="/superadmin/progress">Transaction in Progress</a>
                         <a class="collapse-item" href="/superadmin/delivery">Transaction in Delivery</a>
                         <a class="collapse-item" href="/superadmin/success">Transaction in Successfully</a>
@@ -102,6 +107,10 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Customer:</h6>
                         <a class="collapse-item" href="{{ url('/superadmin/customer') }}">Customer</a>
+=======
+                        <a class="collapse-item" href="buttons.html">Transaction Progress</a>
+                        <a class="collapse-item" href="buttons.html">Transaction Successful </a>
+>>>>>>> 1fedd7b8182012454ee71dc7261a0fa3290734d2
                     </div>
                 </div>
             </li>
