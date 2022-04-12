@@ -58,7 +58,10 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function() {
 });
 
 //Customer
-Route::get('/customer', [CustomerController::class, 'index'])->name('dashboard.customer');
+Route::group(['middleware' => ['auth', 'role:customer']], function() {
+    Route::get('/customer/dashboard', [CustomerController::class, 'index'])->name('dashboard.customer');
+});
+
 
 
 require __DIR__.'/auth.php';

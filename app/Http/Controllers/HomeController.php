@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ImageProduct;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data = Product::all();
-
+        $data = Product::where('status_product', '>', '0')->get();
         return view('index', compact('data'));
     }
 
@@ -47,8 +47,8 @@ class HomeController extends Controller
     public function product($id)
     {
         $data = Product::where('id', $id)->first();
-
-        return view('product', compact('data'));
+        $dataimage = ImageProduct::where('id_produk', $id)->where('status_img_produk', '>', '0')->get();
+        return view('product', compact('data', 'dataimage'));
     }
 
     /**

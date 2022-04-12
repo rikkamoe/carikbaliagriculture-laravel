@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -13,7 +14,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        $data = Product::where('status_product', '>', '0')->get();
+        return view('customer.dashboard', compact('data'));
     }
 
     /**

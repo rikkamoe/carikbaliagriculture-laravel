@@ -133,8 +133,8 @@
                                     <div class="product-item">
                                         <div class="product-img">
                                             <a href="{{ url('product') }}/{{ $item->id }}">
-                                                <img class="primary-img" src="{{ asset('customer/img/'.$item->thumbnail_img) }}" alt="Product Images">
-                                                <img class="secondary-img" src="{{ asset('customer/img/'.$item->thumbnail_img) }}" alt="Product Images">
+                                                <img class="primary-img" src="{{ asset('img_uploads/thumbnail/'.$item->thumbnail_img) }}" alt="Product Images">
+                                                <img class="secondary-img" src="{{ asset('img_uploads/thumbnail/'.$item->thumbnail_img) }}" alt="Product Images">
                                             </a>
                                         </div>
                                         <div class="product-content">

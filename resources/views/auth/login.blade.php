@@ -127,20 +127,21 @@
                                     <h4 class="login-title">Login</h4>
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label>Email Address*</label>
-                                            <input type="email" name="email" placeholder="Email Address">
+                                            <label>Alamat Email</label>
+                                            <input type="email" name="email" placeholder="Alamat Email" required>
                                         </div>
                                         <div class="col-lg-12">
-                                            <label>Password</label>
-                                            <input type="password" name="password" placeholder="Password">
+                                            <label>Kata Sandi</label>
+                                            <input type="password" name="password" placeholder="Kata Sandi" required>
                                         </div>
-                                        <div class="col-md-4 pt-1 mt-md-0">
+                                        {{-- <div class="col-md-4 pt-1 mt-md-0">
                                             <div class="forgotton-password_info">
                                                 <a href="#"> Lupa Password ?</a>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         <div class="col-lg-12 pt-5">
                                             <button class="btn btn-custom-size lg-size btn-pronia-primary" type="submit">Login</button>
+                                            <a class="btn btn-custom-size lg-size btn-pronia-primary ml-5" href="/register">Register</a>
                                         </div>
                                     </div>
                                 </div>

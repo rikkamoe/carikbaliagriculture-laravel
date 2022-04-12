@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,7 +21,8 @@ class AuthController extends Controller
         }
         else if(Auth::user()->hasRole('customer'))
         {
-            return view('customer.dashboard');
+            $data = Product::where('status_product', '>', '0')->get();
+            return view('customer.dashboard', compact('data'));
         }
     }
 

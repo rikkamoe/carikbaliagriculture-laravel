@@ -184,7 +184,7 @@
                                                                     @endif
                                                                 </option>
                                                                 @if ($item->status_user == '1')
-                                                                    <option value="2">Non-Active</option>
+                                                                    <option value="0">Non-Active</option>
                                                                 @else
                                                                     <option value="1">Active</option>
                                                                 @endif
@@ -271,7 +271,7 @@
                             <label for="exampleFormControlInput1" class="form-label">Status Product</label>
                             <select class="form-select" aria-label="Default select example" name="status_input">
                                 <option value="1">Active</option>
-                                <option value="2">Non-Active</option>
+                                <option value="0">Non-Active</option>
                             </select>
                         </div>
                     </div>

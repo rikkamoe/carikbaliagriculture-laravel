@@ -53,7 +53,7 @@
                                     <a href="https://wa.me/+6281246312412">+6281246312412</a>
                                 </div>
 
-                                <a href="{{ url('/') }}" class="header-logo">
+                                <a href="{{ url('/customer/dashboard') }}" class="header-logo">
                                     <img src="{{ asset('customer/img/logo.png') }}" height="100px" alt="Header Logo">
                                 </a>
 
@@ -64,7 +64,8 @@
                                                 <i class="pe-7s-users"></i>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="settingButton">
-                                                <li><a class="dropdown-item" href="{{ url('/login') }}">Login</a>
+                                                <li>
+                                                    <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -88,19 +89,22 @@
                                 <nav class="main-nav">
                                     <ul>
                                         <li class="drop-holder">
-                                            <a href="{{ url('/') }}">Beranda</a>
+                                            <a href="{{ url('/customer/dashboard') }}">Beranda</a>
                                         </li>
                                         <li class="drop-holder">
-                                            <a href="{{ url('/') }}#produk">Produk</a>
+                                            <a href="{{ url('/customer/dashboard') }}#produk">Produk</a>
                                         </li>
                                         <li class="drop-holder">
-                                            <a href="{{ url('education') }}">Edukasi</a>
+                                            <a href="{{ url('/customer/education') }}">Edukasi</a>
                                         </li>
                                         <li class="drop-holder">
-                                            <a href="{{ url('/') }}#testimoni">Testimoni</a>
+                                            <a href="{{ url('/customer/dashboard') }}#testimoni">Testimoni</a>
                                         </li>
                                         <li class="drop-holder">
-                                            <a href="{{ url('contact') }}">Kontak</a>
+                                            <a href="{{ url('/customer/contact') }}">Kontak</a>
+                                        </li>
+                                        <li class="drop-holder">
+                                            <a href="{{ url('/customer/history') }}">Pemesanan</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -115,7 +119,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-3 col-6">
 
-                                <a href="{{ url('/') }}" class="header-logo">
+                                <a href="{{ url('/customer/dashboard') }}" class="header-logo">
                                     <img src="{{ asset('customer/img/logo.png') }}" alt="Header Logo">
                                 </a>
 
@@ -125,19 +129,22 @@
                                     <nav class="main-nav">
                                         <ul>
                                             <li class="drop-holder">
-                                                <a href="{{ url('/') }}">Beranda</a>
+                                                <a href="{{ url('/customer/dashboard') }}">Beranda</a>
                                             </li>
                                             <li class="drop-holder">
-                                                <a href="{{ url('/') }}#produk">Produk</a>
+                                                <a href="{{ url('/customer/dashboard') }}#produk">Produk</a>
                                             </li>
                                             <li class="drop-holder">
-                                                <a href="{{ url('education') }}">Edukasi</a>
+                                                <a href="{{ url('/customer/education') }}">Edukasi</a>
                                             </li>
                                             <li class="drop-holder">
-                                                <a href="{{ url('/') }}#testimoni">Testimoni</a>
+                                                <a href="{{ url('/customer/dashboard') }}#testimoni">Testimoni</a>
                                             </li>
                                             <li class="drop-holder">
-                                                <a href="{{ url('contact') }}">Kontak</a>
+                                                <a href="{{ url('/customer/contact') }}">Kontak</a>
+                                            </li>
+                                            <li class="drop-holder">
+                                                <a href="{{ url('/customer/history') }}">Pemesanan</a>
                                             </li>
                                         </ul>
                                     </nav>
