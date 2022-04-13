@@ -10,6 +10,7 @@ use App\Http\Controllers\AuthController;
 
 // Customer
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\CustomerProductController;
 
 // Superadmin
 use App\Http\Controllers\SuperadminController;
@@ -60,6 +61,10 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function() {
 //Customer
 Route::group(['middleware' => ['auth', 'role:customer']], function() {
     Route::get('/customer/dashboard', [CustomerController::class, 'index'])->name('dashboard.customer');
+    Route::get('/customer/product/{id}', [CustomerProductController::class, 'show'])->name('product.customer');
+    Route::get('/customer/education', [CustomerController::class, 'education'])->name('education.customer');
+    Route::get('/customer/contact', [CustomerController::class, 'contact'])->name('contact.customer');
+    Route::get('/customer/history', [CustomerController::class, 'history'])->name('order.customer');
 });
 
 

@@ -132,13 +132,13 @@
                                 <div class="col-xl-3 col-md-4 col-sm-6">
                                     <div class="product-item">
                                         <div class="product-img">
-                                            <a href="{{ url('product') }}/{{ $item->id }}">
+                                            <a href="{{ url('/customer/product') }}/{{ $item->id }}">
                                                 <img class="primary-img" src="{{ asset('img_uploads/thumbnail/'.$item->thumbnail_img) }}" alt="Product Images">
                                                 <img class="secondary-img" src="{{ asset('img_uploads/thumbnail/'.$item->thumbnail_img) }}" alt="Product Images">
                                             </a>
                                         </div>
                                         <div class="product-content">
-                                            <a class="product-name" href="{{ url('product') }}/{{ $item->id }}">{{ $item->name_product }}</a>
+                                            <a class="product-name" href="{{ url('/customer/product') }}/{{ $item->id }}">{{ $item->name_product }}</a>
                                             <div class="price-box pb-1">
                                                 <span class="new-price">Rp. {{ number_format($item->price_product) }}</span>
                                             </div>

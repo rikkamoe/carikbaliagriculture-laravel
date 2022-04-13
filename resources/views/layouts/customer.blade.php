@@ -65,7 +65,13 @@
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="settingButton">
                                                 <li>
-                                                    <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
+                                                    <form method="POST" action="{{ route('logout') }}">
+                                                        @csrf
+                                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                                                            Logout
+                                                        </a>
+                                                    </form>
+                                                    {{-- <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a> --}}
                                                 </li>
                                             </ul>
                                         </li>
@@ -158,7 +164,13 @@
                                                 <i class="pe-7s-users"></i>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="settingButton">
-                                                <li><a class="dropdown-item" href="{{ url('/login') }}">Login</a>
+                                                <li>
+                                                    <form method="POST" action="{{ route('logout') }}">
+                                                        @csrf
+                                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                                                            Logout
+                                                        </a>
+                                                    </form>
                                                 </li>
                                             </ul>
                                         </li>
@@ -219,6 +231,9 @@
                                     </li>
                                     <li class="drop-holder">
                                         <a href="{{ url('contact') }}">Kontak</a>
+                                    </li>
+                                    <li class="drop-holder">
+                                        <a href="{{ url('/customer/history') }}">Pemesanan</a>
                                     </li>
                                 </ul>
                             </nav>
