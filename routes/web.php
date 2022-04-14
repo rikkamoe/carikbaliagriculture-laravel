@@ -11,6 +11,7 @@ use App\Http\Controllers\AuthController;
 // Customer
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CustomerProductController;
+use App\Http\Controllers\CustomerProfileController;
 
 // Superadmin
 use App\Http\Controllers\SuperadminController;
@@ -62,9 +63,12 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function() {
 Route::group(['middleware' => ['auth', 'role:customer']], function() {
     Route::get('/customer/dashboard', [CustomerController::class, 'index'])->name('dashboard.customer');
     Route::get('/customer/product/{id}', [CustomerProductController::class, 'show'])->name('product.customer');
+    Route::get('/customer/order', [CustomerProductController::class, 'store'])->name('order.product.customer');
     Route::get('/customer/education', [CustomerController::class, 'education'])->name('education.customer');
     Route::get('/customer/contact', [CustomerController::class, 'contact'])->name('contact.customer');
     Route::get('/customer/history', [CustomerController::class, 'history'])->name('order.customer');
+    Route::get('/customer/profile', [CustomerProfileController::class, 'index'])->name('profile.customer');
+    Route::post('/customer/profile', [CustomerProfileController::class, 'store'])->name('update.profile.customer');
 });
 
 

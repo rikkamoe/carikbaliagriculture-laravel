@@ -65,6 +65,9 @@
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="settingButton">
                                                 <li>
+                                                    <a class="dropdown-item" href="{{ url('/customer/profile') }}">Akun Saya</a>
+                                                </li>
+                                                <li>
                                                     <form method="POST" action="{{ route('logout') }}">
                                                         @csrf
                                                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
@@ -164,6 +167,9 @@
                                                 <i class="pe-7s-users"></i>
                                             </button>
                                             <ul class="dropdown-menu" aria-labelledby="settingButton">
+                                                <li>
+                                                    <a class="dropdown-item" href="{{ url('/customer/profile') }}">Akun Saya</a>
+                                                </li>
                                                 <li>
                                                     <form method="POST" action="{{ route('logout') }}">
                                                         @csrf
@@ -332,7 +338,7 @@
 
     <!-- JS Files
     ============================================ -->
-
+    @include('sweetalert::alert')
     <script src="{{ asset('customer/assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('customer/assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('customer/assets/js/vendor/jquery-migrate-3.3.2.min.js') }}"></script>

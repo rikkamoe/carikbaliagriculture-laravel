@@ -65,16 +65,19 @@
                             <span class="new-price">Rp. {{ number_format($data->price_product) }}</span>
                         </div>
                         <p class="short-desc">{{ $data->description_product }}</p>
-                        <ul class="quantity-with-btn">
-                            <li class="quantity">
-                                <div class="cart-plus-minus">
-                                    <input class="cart-plus-minus-box" name="quantity" value="1" type="text">
-                                </div>
-                            </li>
-                            <li class="add-to-cart">
-                                <a class="btn btn-custom-size lg-size btn-pronia-primary" href="{{ url('login') }}">Order</a>
-                            </li>
-                        </ul>
+                        <form method="GET" action="{{ url('/customer/order') }}">
+                            @csrf
+                            <ul class="quantity-with-btn">
+                                <li class="quantity">
+                                    <div class="cart-plus-minus">
+                                        <input class="cart-plus-minus-box" name="quantity" value="1" type="text">
+                                    </div>
+                                </li>
+                                <li class="add-to-cart">
+                                    <button class="btn btn-custom-size lg-size btn-pronia-primary" type="submit">Order</button>
+                                </li>
+                            </ul>
+                        </form>
                         <div class="product-category mt-5">
                             <span class="title">SKU:</span>
                             <ul>

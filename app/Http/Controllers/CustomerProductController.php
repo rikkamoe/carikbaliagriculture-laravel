@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ImageProduct;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CustomerProductController extends Controller
 {
@@ -36,7 +37,16 @@ class CustomerProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->quantity == null)
+        {
+            Alert::toast('Data produk tidak ditemukan', 'error');
+            $data = Product::where('status_product', '>', '0')->get();
+            return redirect()->route('dashboard.customer')->with(['data']);
+        }
+        else
+        {
+            dd($request);
+        }
     }
 
     /**
