@@ -13,9 +13,9 @@
                             <div class="row">
                                 <div class="col-lg-6 order-2 order-lg-1 align-self-center">
                                     <div class="slide-content text-black">
-                                        <span class="offer">Diskon 65%</span>
+                                        <span class="offer">Diskon 30%</span>
                                         <h2 class="title">Produk Baru</h2>
-                                        <p class="short-desc">Sayuran dengan bahan organik.</p>
+                                        <p class="short-desc">Pisang Cavendish Organik</p>
                                         <div class="btn-wrap">
                                             <a class="btn btn-custom-size xl-size btn-pronia-primary" href="#produk">Pesan Sekarang</a>
                                         </div>
@@ -25,7 +25,7 @@
                                     <div class="inner-img">
                                         <div class="scene fill">
                                             <div class="expand-width" data-depth="0.2">
-                                                <img src="{{ asset('customer/img/3.jpg') }}" alt="Inner Image">
+                                                <img src="{{ asset('customer/img/header2.jpeg') }}" alt="Inner Image">
                                             </div>
                                         </div>
                                     </div>
@@ -40,9 +40,9 @@
                             <div class="row">
                                 <div class="col-lg-6 order-2 order-lg-1 align-self-center">
                                     <div class="slide-content text-black">
-                                        <span class="offer">Diskon 65%</span>
+                                        <span class="offer">Diskon 30%</span>
                                         <h2 class="title">Produk Baru</h2>
-                                        <p class="short-desc">Sayuran dengan bahan organik.</p>
+                                        <p class="short-desc">Buah Pepaya Organik</p>
                                         <div class="btn-wrap">
                                             <a class="btn btn-custom-size xl-size btn-pronia-primary" href="#produk">Pesan Sekarang</a>
                                         </div>
@@ -52,7 +52,7 @@
                                     <div class="inner-img">
                                         <div class="scene fill">
                                             <div class="expand-width" data-depth="0.2">
-                                                <img src="{{ asset('customer/img/3.jpg') }}" alt="Inner Image">
+                                                <img src="{{ asset('customer/img/header1.jpeg') }}" alt="Inner Image">
                                             </div>
                                         </div>
                                     </div>

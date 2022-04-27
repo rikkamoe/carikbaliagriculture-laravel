@@ -63,7 +63,7 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function() {
 Route::group(['middleware' => ['auth', 'role:customer']], function() {
     Route::get('/customer/dashboard', [CustomerController::class, 'index'])->name('dashboard.customer');
     Route::get('/customer/product/{id}', [CustomerProductController::class, 'show'])->name('product.customer');
-    Route::get('/customer/order', [CustomerProductController::class, 'store'])->name('order.product.customer');
+    Route::post('/customer/order', [CustomerProductController::class, 'store'])->name('order.product.customer');
     Route::get('/customer/education', [CustomerController::class, 'education'])->name('education.customer');
     Route::get('/customer/contact', [CustomerController::class, 'contact'])->name('contact.customer');
     Route::get('/customer/history', [CustomerController::class, 'history'])->name('order.customer');

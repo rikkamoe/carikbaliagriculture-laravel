@@ -11,7 +11,7 @@
                         <h2 class="breadcrumb-heading">{{ $data->name_product }}</h2>
                         <ul>
                             <li>
-                                <a href="{{ url('/customer/dashboard') }}">Home</a>
+                                <a href="{{ url('/customer/dashboard') }}">Beranda</a>
                             </li>
                             <li>{{ $data->name_product }}</li>
                         </ul>
@@ -65,7 +65,7 @@
                             <span class="new-price">Rp. {{ number_format($data->price_product) }}</span>
                         </div>
                         <p class="short-desc">{{ $data->description_product }}</p>
-                        <form method="GET" action="{{ url('/customer/order') }}">
+                        <form method="POST" action="{{ url('/customer/order') }}">
                             @csrf
                             <ul class="quantity-with-btn">
                                 <li class="quantity">
@@ -74,6 +74,7 @@
                                     </div>
                                 </li>
                                 <li class="add-to-cart">
+                                    <input type="hidden" value="{{ $data->id }}" name="id">
                                     <button class="btn btn-custom-size lg-size btn-pronia-primary" type="submit">Order</button>
                                 </li>
                             </ul>
