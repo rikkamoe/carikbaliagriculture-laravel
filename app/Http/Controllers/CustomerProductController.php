@@ -3,34 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\ImageProduct;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class CustomerProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -126,36 +108,59 @@ class CustomerProductController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function transfer(Request $request)
     {
-        //
+        $data = Product::where('status_product', '>', '0')->get();
+        $datapayment = json_decode($request->payment);
+
+        Order::create([
+            'date_order' => Carbon::now(),
+            'id_order' => $datapayment->order_id,
+            'id_user' => Auth::user()->id,
+            'id_product' => $request->id_product,
+            'quantity_order' => $request->quantity,
+            'total_order' => $request->total,
+            'type_order' => '1',
+            'status_order' => '0',
+        ]);
+
+        Alert::toast('Pesanan kamu sedang di proses', 'success');
+        return redirect()->route('dashboard.customer')->with(['data']);
     }
 
     /**
-     * Update the specified resource in storage.
+     * Display the specified resource.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function cod(Request $request)
     {
-        //
-    }
+        $data = Product::where('status_product', '>', '0')->get();
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyz';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < 14; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        Order::create([
+            'date_order' => Carbon::now(),
+            'id_order' => $randomString,
+            'id_user' => Auth::user()->id,
+            'id_product' => $request->id_product,
+            'quantity_order' => $request->quantity,
+            'total_order' => $request->total,
+            'type_order' => '2',
+            'status_order' => '0',
+        ]);
+
+        Alert::toast('Pesanan kamu sedang di proses', 'success');
+        return redirect()->route('dashboard.customer')->with(['data']);
     }
 }

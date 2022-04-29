@@ -64,7 +64,13 @@
                                         <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
                                             <div class="card-body">
                                                 <div class="order-button-payment mb-3">
-                                                    <input value="Buat Pesanan" type="submit">
+                                                    <form method="POST" action="{{ url('customer/payment/cod') }}">
+                                                        @csrf
+                                                        <input type="hidden" name="id_product" value="{{ $data->id }}">
+                                                        <input type="hidden" name="quantity" value="{{ $orderdetail["quantity"] }}">
+                                                        <input type="hidden" name="total" value="{{ $orderdetail["total"] }}">
+                                                        <input value="Buat Pesanan" type="submit">
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>

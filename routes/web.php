@@ -18,6 +18,7 @@ use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\SuperadminProductController;
 use App\Http\Controllers\SuperadminImageProductController;
 use App\Http\Controllers\SuperadminUserController;
+use App\Http\Controllers\SuperadminTransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +58,7 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function() {
     Route::post('/superadmin/customer', [SuperadminUserController::class, 'store'])->name('post.user.superadmin');
     Route::post('/superadmin/customer/edit/{id}', [SuperadminUserController::class, 'update'])->name('update.user.superadmin');
     Route::delete('/superadmin/customer/delete/{id}', [SuperadminUserController::class, 'destroy'])->name('delete.user.superadmin');
+    Route::get('/superadmin/progress', [SuperadminTransactionController::class, 'indexprogress'])->name('transaction.progress.superadmin');
 });
 
 //Customer
@@ -69,6 +71,8 @@ Route::group(['middleware' => ['auth', 'role:customer']], function() {
     Route::get('/customer/history', [CustomerController::class, 'history'])->name('order.customer');
     Route::get('/customer/profile', [CustomerProfileController::class, 'index'])->name('profile.customer');
     Route::post('/customer/profile', [CustomerProfileController::class, 'store'])->name('update.profile.customer');
+    Route::post('/customer/payment/transfer', [CustomerProductController::class, 'transfer'])->name('transfer.product.customer');
+    Route::post('/customer/payment/cod', [CustomerProductController::class, 'cod'])->name('cod.product.customer');
 });
 
 
