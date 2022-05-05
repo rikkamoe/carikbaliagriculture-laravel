@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SuperadminTransactionController extends Controller
 {
@@ -24,9 +27,29 @@ class SuperadminTransactionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function confirmprogress(Request $request)
     {
-        //
+        // $url = "https://messages-sandbox.nexmo.com/v0.1/messages";
+        // $params = ["to" => ["type" => "whatsapp", "number" => $request->to_input],
+        //     "from" => ["type" => "whatsapp", "number" => "81272719546"],
+        //     "message" => [
+        //         "content" => [
+        //             "type" => "text",
+        //             "text" => $request->description_input
+        //         ]
+        //     ]
+        // ];
+        // $headers = ["Authorization" => "Basic " . base64_encode(env('NEXMO_API_KEY') . ":" . env('NEXMO_API_SECRET'))];
+
+        // $client = new \GuzzleHttp\Client();
+        // $response = $client->request('POST', $url, ["headers" => $headers, "json" => $params]);
+        // $datafinal = $response->getBody();
+        // Log::Info($datafinal);
+
+
+        // Alert::success('Success Message', 'Success Confirm');
+        // $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '0')->get();
+        // return redirect()->route('transaction.progress.superadmin')->with(['data']);
     }
 
     /**

@@ -59,6 +59,7 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function() {
     Route::post('/superadmin/customer/edit/{id}', [SuperadminUserController::class, 'update'])->name('update.user.superadmin');
     Route::delete('/superadmin/customer/delete/{id}', [SuperadminUserController::class, 'destroy'])->name('delete.user.superadmin');
     Route::get('/superadmin/progress', [SuperadminTransactionController::class, 'indexprogress'])->name('transaction.progress.superadmin');
+    Route::post('/superadmin/progress/confirm', [SuperadminTransactionController::class, 'confirmprogress'])->name('confirm.transaction.progress.superadmin');
 });
 
 //Customer
