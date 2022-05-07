@@ -4,7 +4,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Data Transaction Progress</h1>
+    <h1 class="h3 mb-2 text-gray-800">Data Transaction Delivery</h1>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
@@ -142,7 +142,7 @@
                                           <h5 class="modal-title" id="staticBackdropLabel">Confirm Order</h5>
                                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <form method="POST" action="{{ url('superadmin/progress/confirm') }}/{{ $item->id_order }}" enctype="multipart/form-data">
+                                        <form method="POST" action="{{ url('superadmin/delivery/confirm') }}/{{ $item->id_order }}" enctype="multipart/form-data">
                                             @csrf
                                             <div class="modal-body">
                                                 <input type="hidden" value="085739346311" name="from_input">
@@ -188,7 +188,7 @@
                                           <h5 class="modal-title" id="staticBackdropLabel">Cancel Order</h5>
                                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <form method="POST" action="{{ url('superadmin/progress/confirm/cancel') }}/{{ $item->id_order }}" enctype="multipart/form-data">
+                                        <form method="POST" action="{{ url('superadmin/delivery/confirm/cancel') }}/{{ $item->id_order }}" enctype="multipart/form-data">
                                             @csrf
                                             <div class="modal-body">
                                                 <input type="hidden" value="085739346311" name="from_input">

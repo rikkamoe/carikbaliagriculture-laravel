@@ -27,8 +27,17 @@ class SuperadminTransactionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function confirmprogress(Request $request)
+    public function confirmprogress(Request $request, $id)
     {
+        Order::where('id_order', $id)->update([
+            'description_order' => $request->description_input,
+            'status_order' => '1',
+        ]);
+
+        Alert::success('Success Message', 'Success Confirm');
+        $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '0')->get();
+        return redirect()->route('transaction.progress.superadmin')->with(['data']);
+
         // $url = "https://messages-sandbox.nexmo.com/v0.1/messages";
         // $params = ["to" => ["type" => "whatsapp", "number" => $request->to_input],
         //     "from" => ["type" => "whatsapp", "number" => "81272719546"],
@@ -58,53 +67,86 @@ class SuperadminTransactionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function cancelprogress(Request $request, $id)
     {
-        //
+        Order::where('id_order', $id)->update([
+            'description_order' => $request->description_input,
+            'status_order' => '-1',
+        ]);
+
+        Alert::success('Success Message', 'Success Cancel');
+        $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '0')->get();
+        return redirect()->route('transaction.progress.superadmin')->with(['data']);
     }
 
     /**
-     * Display the specified resource.
+     * Display a listing of the resource.
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function indexdelivery()
     {
-        //
+        $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '1')->get();
+        return view('superadmin.delivery', compact('data'));
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
+     * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function confirmdelivery(Request $request, $id)
     {
-        //
+        Order::where('id_order', $id)->update([
+            'description_order' => $request->description_input,
+            'status_order' => '2',
+        ]);
+
+        Alert::success('Success Message', 'Success Cancel');
+        $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '1')->get();
+        return redirect()->route('transaction.delivery.superadmin')->with(['data']);
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Store a newly created resource in storage.
      *
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function canceldelivery(Request $request, $id)
     {
-        //
+        Order::where('id_order', $id)->update([
+            'description_order' => $request->description_input,
+            'status_order' => '-2',
+        ]);
+
+        Alert::success('Success Message', 'Success Cancel');
+        $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '1')->get();
+        return redirect()->route('transaction.delivery.superadmin')->with(['data']);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function indexsuccess()
+    {
+        $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '2')->get();
+        return view('superadmin.success', compact('data'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function indexfailed()
+    {
+        $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '<', '0')->get();
+        return view('superadmin.failed', compact('data'));
     }
 }

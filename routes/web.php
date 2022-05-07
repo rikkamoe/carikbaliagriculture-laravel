@@ -59,7 +59,13 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function() {
     Route::post('/superadmin/customer/edit/{id}', [SuperadminUserController::class, 'update'])->name('update.user.superadmin');
     Route::delete('/superadmin/customer/delete/{id}', [SuperadminUserController::class, 'destroy'])->name('delete.user.superadmin');
     Route::get('/superadmin/progress', [SuperadminTransactionController::class, 'indexprogress'])->name('transaction.progress.superadmin');
-    Route::post('/superadmin/progress/confirm', [SuperadminTransactionController::class, 'confirmprogress'])->name('confirm.transaction.progress.superadmin');
+    Route::post('/superadmin/progress/confirm/{id}', [SuperadminTransactionController::class, 'confirmprogress'])->name('confirm.transaction.progress.superadmin');
+    Route::post('/superadmin/progress/confirm/cancel/{id}', [SuperadminTransactionController::class, 'cancelprogress'])->name('cancel.transaction.progress.superadmin');
+    Route::get('/superadmin/delivery', [SuperadminTransactionController::class, 'indexdelivery'])->name('transaction.delivery.superadmin');
+    Route::post('/superadmin/delivery/confirm/{id}', [SuperadminTransactionController::class, 'confirmdelivery'])->name('confirm.transaction.delivery.superadmin');
+    Route::post('/superadmin/delivery/confirm/cancel/{id}', [SuperadminTransactionController::class, 'canceldelivery'])->name('cancel.transaction.delivery.superadmin');
+    Route::get('/superadmin/success', [SuperadminTransactionController::class, 'indexsuccess'])->name('transaction.success.superadmin');
+    Route::get('/superadmin/failed', [SuperadminTransactionController::class, 'indexfailed'])->name('transaction.failed.superadmin');
 });
 
 //Customer
