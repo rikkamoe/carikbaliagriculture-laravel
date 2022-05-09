@@ -150,7 +150,7 @@
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label for="exampleFormControlInput1" class="form-label">Name Customer</label>
-                                                            <input type="text" name="img_input" value="{{  $item->name }}" class="form-control" readonly>
+                                                            <input type="text" name="name_input" value="{{  $item->name }}" class="form-control" readonly>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">

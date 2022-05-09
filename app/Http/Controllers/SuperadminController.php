@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class SuperadminController extends Controller
@@ -13,7 +15,13 @@ class SuperadminController extends Controller
      */
     public function index()
     {
-        return view('superadmin.dashboard');
+        $data = Product::where('status_product', '>', '0')->get()->count();
+        $data2 = Order::where('status_order', '0')->get()->count();
+        $data3 = Order::where('status_order', '1')->get()->count();
+        $data4 = Order::where('status_order', '<', '0')->get()->count();
+        $data5 = Order::where('status_order', '2')->get();
+        $omset = $data5->sum('total_order');
+        return view('superadmin.dashboard', compact('data', 'data2', 'data3', 'data4', 'omset'));
     }
 
     /**

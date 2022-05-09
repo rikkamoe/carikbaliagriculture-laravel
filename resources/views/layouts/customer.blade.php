@@ -10,7 +10,7 @@
     <meta name="description" content="Pronia plant store bootstrap 5 template is an awesome website template for any home plant shop.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('customer/assets/images/favicon.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('customer/img/logo.png') }}" />
 
     <!-- CSS
     ============================================ -->
@@ -264,12 +264,7 @@
                                         <img src="{{ asset('customer/img/logo.png') }}" height="100px" alt="Logo">
                                     </a>
                                 </div>
-                                <p class="footer-widget-desc">Lorem ipsum dolor sit amet, consec adipisl elit, sed do eiusmod
-                                    tempor
-                                    <br>
-                            incidio ut labore et dolore magna.
-                                </p>
-                                {{-- <div class="social-link with-border">
+                                <div class="social-link with-border">
                                     <ul>
                                         <li>
                                             <a href="#" data-tippy="Facebook" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
@@ -283,16 +278,16 @@
                                         </li>
                                         <li>
                                             <a href="#" data-tippy="Pinterest" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
-                                                <i class="fa fa-pinterest"></i>
+                                                <i class="fa fa-instagram"></i>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" data-tippy="Dribbble" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
-                                                <i class="fa fa-dribbble"></i>
+                                                <i class="fa fa-phone"></i>
                                             </a>
                                         </li>
                                     </ul>
-                                </div> --}}
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6 pt-40">
