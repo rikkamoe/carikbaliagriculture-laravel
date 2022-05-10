@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
@@ -80,6 +81,12 @@ class SuperadminTransactionController extends Controller
         Order::where('id_order', $id)->update([
             'description_order' => $request->description_input,
             'status_order' => '2',
+        ]);
+
+        $dataproduct = Product::where('name_product', $request->product_input)->first();
+
+        Product::where('name_product', $request->product_input)->update([
+            'stock_product' => $dataproduct->stock_product - $request->quantity_input,
         ]);
 
         Alert::success('Success Message', 'Success Cancel');

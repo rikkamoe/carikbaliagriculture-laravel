@@ -39,7 +39,7 @@
                             </p>
                         </div>
                         <div class="blog-img img-hover-effect">
-                            <img class="img-full" src="assets/images/blog/large-size/1-1-768x546.jpg" alt="Blog Image">
+                            <img class="img-full" src="{{ asset('customer/assets/images/blog/large-size/1-1-768x546.jpg') }}" alt="Blog Image">
                         </div>
                         <p class="short-desc">Makanan bernutrisi adalah nutrisi penting dalam tubuh kita. Keseimbangan kandungan penting dari makanan, seperti karbohidrat, protein, lemak, dan lainnya mempengaruhi kesehatan tubuh kita. Air putih juga penting sekali untuk tubuh kita, yang mana tubuh kita terdiri dari air dengan komposisi lebih dari 50 persen. Jika kita kekurangan air, maka kita bisa lemas ataupun dehidrasi. Pola makan kita wajib diatur juga untuk menghindari penyakit, seperti obesitas. Nah, olahraga juga penting dalam menjaga kebugaran tubuh kita. Olahraga dapat dilakukan secara ringan, tetapi rutin. Dengan itu, kita akan merasa lebih segar dan bersemangat dalam beraktivitas.</p>
                         <blockquote>
@@ -50,10 +50,10 @@
                         </p>
                         <div class="blog-banner row">
                             <div class="single-img img-hover-effect col-sm-6">
-                                <img class="img-full" src="assets/images/blog/medium-size/2-1-370x270.jpg" alt="Blog Banner">
+                                <img class="img-full" src="{{ asset('customer/assets/images/blog/medium-size/2-1-370x270.jpg') }}" alt="Blog Banner">
                             </div>
                             <div class="single-img img-hover-effect col-sm-6 pt-5 pt-sm-0">
-                                <img class="img-full" src="assets/images/blog/medium-size/2-2-370x270.jpg" alt="Blog Banner">
+                                <img class="img-full" src="{{ asset('customer/assets/images/blog/medium-size/2-2-370x270.jpg') }}" alt="Blog Banner">
                             </div>
                         </div>
                         <p class="short-desc mb-0">Buah dan sayur adalah sumber nutrisi yang sangat baik buat tubuh. Perhatikan cara pengolahannya ya. Ada yang dimakan langsung, direbus, ditumis, dan lainnya. Tetapi, tetap ingat ya, jangan banyak minyak (lemak). Misalnya saja buah, yang dapat diolah menjadi rujak, huhu sangat enak bukan? nah, banyak inovasi yang muncul dari itu. Ada buah mangga, jeruk, salak, buah naga, sayur kangkung, sayur daun singkong, dan banyak lagi. Di Carik Bali menyediakan hasil panen buah dan sayur yang tentunya baik untuk kesehatan, berkualitas, dan dipanen dari kebun langsung. Pokoknya percaya deh, tinggal pilih, pesan, bayar, dan barang pun segera tiba di lokasi Anda.

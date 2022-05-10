@@ -146,6 +146,8 @@
                                             @csrf
                                             <div class="modal-body">
                                                 <input type="hidden" value="085739346311" name="from_input">
+                                                <input type="hidden" value="{{ $item->quantity_order }}" name="quantity_input">
+                                                <input type="hidden" value="{{ $item->name_product }}" name="product_input">
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
