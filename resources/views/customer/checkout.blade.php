@@ -107,7 +107,7 @@
     <input type="hidden" name="total" value="{{ $orderdetail["total"] }}">
     <input type="hidden" name="payment" id="payment_callback">
 </form>
-<script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ config('services.midtrans.clientKey') }}"></script>
+<script src="https://app.midtrans.com/snap/snap.js" data-client-key="{{ config('services.midtrans.clientKey') }}"></script>
 <script type="text/javascript">
     document.getElementById('pay-button').onclick = function(){
         // SnapToken acquired from previous step

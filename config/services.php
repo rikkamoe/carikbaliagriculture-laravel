@@ -33,7 +33,7 @@ return [
     'midtrans' => [
         'serverKey'     => env('MIDTRANS_SERVERKEY'),
         'clientKey'     => env('MIDTRANS_CLIENTKEY'),
-        'isProduction'  => env('MIDTRANS_IS_PRODUCTION', false), // false = Development | true = Production
+        'isProduction'  => env('MIDTRANS_IS_PRODUCTION', true), // false = Development | true = Production
         'isSanitized'   => env('MIDTRANS_IS_SANITIZED', true),
         'is3ds'         => env('MIDTRANS_IS_3DS', true),
     ],
