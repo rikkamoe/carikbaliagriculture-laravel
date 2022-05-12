@@ -36,9 +36,13 @@ class SuperadminTransactionController extends Controller
             'status_order' => '1',
         ]);
 
+        $text = str_replace(' ', '%20', $request->description_input);
+
         Alert::success('Success Message', 'Success Confirm');
+        return redirect()->away('https://wa.me/'.$request->to_input.'?text=Admin%20:%20'.$text);
         $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '0')->get();
         return redirect()->route('transaction.progress.superadmin')->with(['data']);
+
     }
 
     /**
@@ -54,7 +58,10 @@ class SuperadminTransactionController extends Controller
             'status_order' => '-1',
         ]);
 
+        $text = str_replace(' ', '%20', $request->description_input);
+
         Alert::success('Success Message', 'Success Cancel');
+        return redirect()->away('https://wa.me/'.$request->to_input.'?text=Admin%20:%20'.$text);
         $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '0')->get();
         return redirect()->route('transaction.progress.superadmin')->with(['data']);
     }
@@ -89,7 +96,10 @@ class SuperadminTransactionController extends Controller
             'stock_product' => $dataproduct->stock_product - $request->quantity_input,
         ]);
 
-        Alert::success('Success Message', 'Success Cancel');
+        $text = str_replace(' ', '%20', $request->description_input);
+
+        Alert::success('Success Message', 'Success Delivery');
+        return redirect()->away('https://wa.me/'.$request->to_input.'?text=Admin%20:%20'.$text);
         $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '1')->get();
         return redirect()->route('transaction.delivery.superadmin')->with(['data']);
     }
@@ -107,7 +117,10 @@ class SuperadminTransactionController extends Controller
             'status_order' => '-2',
         ]);
 
+        $text = str_replace(' ', '%20', $request->description_input);
+
         Alert::success('Success Message', 'Success Cancel');
+        return redirect()->away('https://wa.me/'.$request->to_input.'?text=Admin%20:%20'.$text);
         $data = DB::table('tb_order')->join('tb_produk', 'tb_order.id_product', '=', 'tb_produk.id')->join('users', 'tb_order.id_user', '=', 'users.id')->where('status_order', '1')->get();
         return redirect()->route('transaction.delivery.superadmin')->with(['data']);
     }
